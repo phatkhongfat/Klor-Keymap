@@ -34,7 +34,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:apple-keyboard-option$$', h: Lower Layer}
@@ -371,3 +371,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [1, 2]
+  k: (
+- p: [7, 8]
+  k: )
+- p: [12, 13]
+  k: '{'
+- p: [19, 18]
+  k: '}'
+- p: [30, 31]
+  k: {t: ']', s: '}'}
+- p: [24, 25]
+  k: {t: '[', s: '{'}
