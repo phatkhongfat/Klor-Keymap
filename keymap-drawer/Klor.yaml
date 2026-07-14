@@ -96,9 +96,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
-  - SCREENSAVER
+  - Gui+L
   - $$mdi:volume-high$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-command$$
   - $$mdi:volume-low$$
   - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
