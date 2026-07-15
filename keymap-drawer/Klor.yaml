@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - A
   - S
   - D
@@ -41,7 +41,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
   - {t: CLCK, h: Raise Layer}
-  - $$mdi:keyboard-tab$$
+  - RIGHT GUI
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
@@ -384,3 +384,11 @@ combos:
   k: {t: ']', s: '}'}
 - p: [24, 25]
   k: {t: '[', s: '{'}
+- p: [34, 41]
+  k: BT CLR ALL
+- p: [42, 47]
+  k: {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+- p: [46, 51]
+  k: {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+- p: [10, 0]
+  k: $$mdi:keyboard-esc$$
