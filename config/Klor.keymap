@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -107,15 +108,6 @@
         };
     };
 
-    macros {
-        alt_tab: alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(TAB)>;
-            label = "ALT_TAB";
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -148,6 +140,26 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <24 25>;
         };
+
+        Bluetooth_Clear_All {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <34 41>;
+        };
+
+        Bluetooth_Previous_Profile {
+            bindings = <&bt BT_PRV>;
+            key-positions = <42 47>;
+        };
+
+        Bluetooth_Next_Profile {
+            bindings = <&bt BT_NXT>;
+            key-positions = <46 51>;
+        };
+
+        Escape {
+            bindings = <&kp ESC>;
+            key-positions = <10 0>;
+        };
     };
 
     keymap {
@@ -156,11 +168,11 @@
         default_layer {
             display-name = "Default Layer";
             bindings = <
-           &kp Q   &kp W    &kp E      &kp R           &kp T      &kp Y      &kp U       &kp I      &kp O    &kp P
-&kp ESC    &kp A   &kp S    &kp D      &kp F           &kp G      &kp H      &kp J       &kp K      &kp L    &kp SEMI  &kp BSPC
-&kp LSHFT  &kp Z   &kp X    &kp C      &kp V           &kp B      &kp N      &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                   &kp RET  &kp LCTRL  &lt 1 LEFT_ALT  &kp SPACE  &kp SPACE  &lt 2 CLCK  &kp TAB    &kp RET
-&kp LEFT   &kp UP  &kp RET  &kp DOWN   &kp RIGHT                             &kp LEFT    &kp DOWN   &kp RET  &kp UP    &kp RIGHT
+           &kp Q   &kp W    &kp E      &kp R           &kp T      &kp Y      &kp U       &kp I          &kp O    &kp P
+&kp TAB    &kp A   &kp S    &kp D      &kp F           &kp G      &kp H      &kp J       &kp K          &kp L    &kp SEMI  &kp BSPC
+&kp LSHFT  &kp Z   &kp X    &kp C      &kp V           &kp B      &kp N      &kp M       &kp COMMA      &kp DOT  &kp FSLH  &kp ENTER
+                   &kp RET  &kp LCTRL  &lt 1 LEFT_ALT  &kp SPACE  &kp SPACE  &lt 2 CLCK  &kp RIGHT_GUI  &kp RET
+&kp LEFT   &kp UP  &kp RET  &kp DOWN   &kp RIGHT                             &kp LEFT    &kp DOWN       &kp RET  &kp UP    &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_RL>;
