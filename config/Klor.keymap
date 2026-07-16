@@ -141,21 +141,6 @@
             key-positions = <24 25>;
         };
 
-        Bluetooth_Clear_All {
-            bindings = <&bt BT_CLR_ALL>;
-            key-positions = <34 41>;
-        };
-
-        Bluetooth_Previous_Profile {
-            bindings = <&bt BT_PRV>;
-            key-positions = <42 47>;
-        };
-
-        Bluetooth_Next_Profile {
-            bindings = <&bt BT_NXT>;
-            key-positions = <46 51>;
-        };
-
         Escape {
             bindings = <&kp ESC>;
             key-positions = <10 0>;
@@ -168,11 +153,11 @@
         default_layer {
             display-name = "Default Layer";
             bindings = <
-           &kp Q   &kp W         &kp E      &kp R         &kp T        &kp Y            &kp U        &kp I          &kp O    &kp P
-&kp TAB    &kp A   &kp S         &kp D      &kp F         &kp G        &kp H            &kp J        &kp K          &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp LSHFT  &kp Z   &kp X         &kp C      &kp V         &kp B        &kp N            &kp M        &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSLASH
-                   &kp LEFT_ALT  &kp LCTRL  &kp LEFT_ALT  &lt 1 SPACE  &lt 2 RIGHT_GUI  &lt 2 ENTER  &kp BACKSPACE  &kp RET
-&kp LEFT   &kp UP  &kp ENTER     &kp DOWN   &kp RIGHT                                   &kp LEFT     &kp DOWN       &kp RET  &kp UP    &kp RIGHT
+           &kp Q   &kp W      &kp E      &kp R         &kp T        &kp Y            &kp U        &kp I          &kp O       &kp P
+&kp TAB    &kp A   &kp S      &kp D      &kp F         &kp G        &kp H            &kp J        &kp K          &kp L       &kp SEMI  &kp SINGLE_QUOTE
+&kp LSHFT  &kp Z   &kp X      &kp C      &kp V         &kp B        &kp N            &kp M        &kp COMMA      &kp DOT     &kp FSLH  &kp BACKSLASH
+                   &gresc     &kp LCTRL  &kp LEFT_ALT  &lt 1 SPACE  &lt 2 RIGHT_GUI  &lt 2 ENTER  &kp BACKSPACE  &kp INSERT
+&kp LEFT   &kp UP  &kp ENTER  &kp DOWN   &kp RIGHT                                   &kp LEFT     &kp DOWN       &kp RET     &kp UP    &kp RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_RL>;
@@ -184,7 +169,7 @@
            &trans        &kp HOME      &kp UP        &kp END          &trans  &trans  &kp N7  &kp N8  &kp N9  &kp PLUS
 &trans     &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &trans  &trans  &kp N4  &kp N5  &kp N6  &kp MINUS     &kp EQUAL
 &trans     &trans        &kp PG_UP     &kp CLCK      &kp PAGE_DOWN    &trans  &trans  &kp N1  &kp N2  &kp N3  &kp ASTERISK  &trans
-                         &trans        &trans        &trans           &trans  &trans  &trans  &kp N0  &trans
+                         &trans        &trans        &trans           &trans  &trans  &mo 3   &kp N0  &trans
 &kp LG(L)  &kp C_VOL_UP  &kp LEFT_GUI  &kp C_VOL_DN  &kp PRINTSCREEN                  &trans  &trans  &trans  &trans        &trans
             >;
 
@@ -222,11 +207,11 @@
 
         mouse {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans    &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans    &trans        &trans
+                &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans                  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mkp MB1  &mmv MOVE_UP  &mmv MOVE_RIGHT
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_RL>;
@@ -254,6 +239,15 @@
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_RL>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Mouse {
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 };
