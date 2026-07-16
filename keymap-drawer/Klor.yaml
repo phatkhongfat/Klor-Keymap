@@ -35,17 +35,17 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:apple-keyboard-command$$', h: Lower Layer}
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-control$$
-  - {t: CLCK, h: Raise Layer}
   - $$mdi:keyboard-space$$
+  - FN
+  - {t: CLCK, h: Raise Layer}
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:arrow-left-bold$$
@@ -198,7 +198,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
