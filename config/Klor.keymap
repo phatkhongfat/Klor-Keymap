@@ -114,36 +114,43 @@
         Left_Parenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <1 2>;
+            require-prior-idle-ms = <150>;
         };
 
         Right_Parenthesis {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <7 8>;
+            require-prior-idle-ms = <150>;
         };
 
         Left_Brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <12 13>;
+            require-prior-idle-ms = <150>;
         };
 
         Right_Brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <19 18>;
+            require-prior-idle-ms = <150>;
         };
 
         Right_Bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <30 31>;
+            require-prior-idle-ms = <150>;
         };
 
         Left_Bracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <24 25>;
+            require-prior-idle-ms = <150>;
         };
 
         Escape {
             bindings = <&kp ESC>;
             key-positions = <10 0>;
+            require-prior-idle-ms = <150>;
         };
     };
 
@@ -166,11 +173,11 @@
         lower_layer {
             display-name = "Lower Layer";
             bindings = <
-           &trans        &kp HOME      &kp UP        &kp END          &kp PAGE_UP    &trans  &kp MINUS  &kp EQUAL  &trans  &trans
-&trans     &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &kp PAGE_DOWN  &trans  &trans     &trans     &trans  &kp MINUS  &trans
-&trans     &kp N1        &kp N2        &kp N3        &kp N4           &kp N5         &kp N6  &kp N7     &kp N8     &kp N9  &kp N0     &trans
-                         &trans        &trans        &trans           &trans         &mo 3   &trans     &trans     &trans
-&kp LG(L)  &kp C_VOL_UP  &kp LEFT_GUI  &kp C_VOL_DN  &kp PRINTSCREEN                         &trans     &trans     &trans  &trans     &trans
+           &trans        &kp HOME      &kp UP        &kp END          &kp PAGE_UP    &kp UNDERSCORE  &kp MINUS  &kp PLUS  &kp EQUAL  &trans
+&trans     &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &kp PAGE_DOWN  &trans          &trans     &trans    &trans     &kp MINUS  &trans
+&trans     &kp N1        &kp N2        &kp N3        &kp N4           &kp N5         &kp N6          &kp N7     &kp N8    &kp N9     &kp N0     &trans
+                         &trans        &trans        &trans           &trans         &mo 3           &trans     &trans    &trans
+&kp LG(L)  &kp C_VOL_UP  &kp LEFT_GUI  &kp C_VOL_DN  &kp PRINTSCREEN                                 &trans     &trans    &trans     &trans     &trans
             >;
 
             sensor-bindings =
