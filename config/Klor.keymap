@@ -173,8 +173,8 @@
         lower_layer {
             display-name = "Lower Layer";
             bindings = <
-           &trans        &kp HOME      &kp UP        &kp END          &kp PAGE_UP    &kp UNDERSCORE  &kp MINUS  &kp PLUS  &kp EQUAL  &trans
-&trans     &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &kp PAGE_DOWN  &trans          &trans     &trans    &trans     &kp MINUS  &trans
+           &trans        &kp HOME      &kp UP        &kp END          &kp PAGE_UP    &kp UNDERSCORE  &kp MINUS  &kp PLUS  &kp EQUAL  &kp TILDE
+&trans     &trans        &kp LEFT      &kp DOWN      &kp RIGHT        &kp PAGE_DOWN  &trans          &trans     &trans    &trans     &trans     &trans
 &trans     &kp N1        &kp N2        &kp N3        &kp N4           &kp N5         &kp N6          &kp N7     &kp N8    &kp N9     &kp N0     &trans
                          &trans        &trans        &trans           &trans         &mo 3           &trans     &trans    &trans
 &kp LG(L)  &kp C_VOL_UP  &kp LEFT_GUI  &kp C_VOL_DN  &kp PRINTSCREEN                                 &trans     &trans    &trans     &trans     &trans
@@ -188,11 +188,11 @@
         raise_layer {
             display-name = "Raise Layer";
             bindings = <
-           &kp EXCLAMATION  &kp AT_SIGN       &kp POUND          &kp DOLLAR        &kp PERCENT            &kp CARET  &kp AMPERSAND  &kp ASTERISK  &trans  &trans
-&kp TILDE  &kp UNDERSCORE   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp EQUAL         &kp LEFT_PARENTHESIS   &trans     &trans         &trans        &trans  &trans  &trans
-&trans     &kp BACKSLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE  &kp RIGHT_PARENTHESIS  &trans     &trans         &trans        &trans  &trans  &trans
-                            &trans            &trans             &trans            &trans                 &trans     &trans         &trans        &trans
-&trans     &trans           &trans            &trans             &trans                                              &trans         &trans        &trans  &trans  &trans
+           &kp EXCLAMATION  &kp AT_SIGN    &kp POUND     &kp DOLLAR            &kp PERCENT            &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
+&kp TILDE  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans     &trans           &trans         &trans        &trans                &trans                 &trans  &trans          &trans          &trans           &trans  &trans
+                            &trans         &trans        &trans                &trans                 &trans  &trans          &trans          &trans
+&trans     &trans           &trans         &trans        &trans                                               &trans          &trans          &trans           &trans  &trans
             >;
 
             sensor-bindings = <&Scroll_D_U>, <&Scroll_RL>;
